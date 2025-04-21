@@ -8,6 +8,7 @@
 .navbar-left .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    color: cyan;
     text-decoration: none;
 }
 
@@ -24,6 +25,7 @@
 
 .navbar-center .nav-links a {
     text-decoration: none;
+    color: cyan;
 }
 
 .navbar-right {
@@ -39,6 +41,8 @@
 }
 
 .navbar-right .cart-count {
+    background-color: black;
+    color: cyan;
     border-radius: 50%;
     padding: 0.2rem 0.5rem;
     font-size: 0.8rem;
