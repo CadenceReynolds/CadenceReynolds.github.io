@@ -8,8 +8,8 @@ function switchTheme(setTheme, theme) {
             theme === 'light'
                 ? 'dark'
                 : 'light');
-        document.body.style.backgroundColor = theme === 'light' ? '#000' : '#6AD0F5'
-        document.body.style.color = theme === 'light' ? '#00ffff' : '#ff0000'
+        document.body.style.backgroundColor = theme === 'light' ? '#000' : '#30bff6'
+        document.body.style.color = theme === 'light' ? '#00ffff' : '#000000'
 
     }
 }
@@ -20,7 +20,7 @@ export default function ThemeComponent() {
         <>
             <button onClick={switchTheme(setTheme, theme)}
                     style={{
-                        background: theme === 'light' ? '#6AD0F5' : '#000',
+                        background: theme === 'light' ? '#30bff6' : '#000',
                         color: theme === 'light' ? '#000' : '#00ffff',
                         borderWidth : "5px",
                         borderColor: theme === 'light' ? '#000' : '#00ffff',
