@@ -23,10 +23,10 @@ export default function Navbar() {
             <div className="navbar-left">
                 <a
                     style={{
-                    color: theme === 'light' ? '#000' : '#00ffff',
-                }}
-                    href="/" className="logo">
-                    ShopNow
+                        color: theme === 'light' ? '#000' : '#00ffff',
+                    }}
+                    href="/index" className="logo">
+                    Ricks Rolls
                 </a>
             </div>
             <div className="navbar-center">
@@ -37,21 +37,21 @@ export default function Navbar() {
                             style={{
                                 color: theme === 'light' ? '#000' : '#00ffff',
                             }}
-                            href="/products">Products</a>
+                            href="/rolls">Rolls</a>
                     </li>
                     <li>
                         <a
                             style={{
                                 color: theme === 'light' ? '#000' : '#00ffff',
                             }}
-                            href="/about">About Us</a>
+                            href="/pastries">Pastries</a>
                     </li>
                     <li>
                         <a
                             style={{
                                 color: theme === 'light' ? '#000' : '#00ffff',
                             }}
-                            href="/contact">Contact</a>
+                            href="/aboutUs">About Us</a>
                     </li>
                 </ul>
             </div>
