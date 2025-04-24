@@ -53,8 +53,8 @@ body {
 }
 
 [data-theme='dark'] {
-  --bg-color: #111;
-  --text-color: white;
+  --bg-color: #000000;
+  --text-color: #ffffff;
 }
 
 body {
