@@ -1,86 +1,78 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './Navbar.css';
-import {useContext} from "react";
-import {ThemeContext} from "./ThemeContext.jsx";
+import {ThemeContext} from './ThemeContext.jsx';
+import {Link} from 'react-router-dom';
 
 function switchTheme(setTheme, theme) {
     return () => {
-        setTheme(
-            theme === 'light'
-                ? 'dark'
-                : 'light');
-        document.body.style.backgroundColor = theme === 'light' ? '#000' : '#87CEFAFF'
-        document.body.style.color = theme === 'light' ? '#00ffff' : '#000000'
-
-    }
+        setTheme(theme === 'light' ? 'dark' : 'light');
+        document.body.style.backgroundColor = theme === 'light' ? '#000' : '#87CEFAFF';
+        document.body.style.color = theme === 'light' ? '#00ffff' : '#000000';
+    };
 }
 
 export default function Navbar() {
     const {theme, setTheme} = useContext(ThemeContext);
-    return (
 
+    const linkStyle = {
+        color: theme === 'light' ? '#000' : '#00ffff',
+    };
+
+    return (
+        <>
         <div className="navbar">
             <div className="navbar-left">
-                <a
-                    style={{
-                        color: theme === 'light' ? '#000' : '#00ffff',
-                    }}
-                    href="/index" className="logo">
+                <Link to="/ricksHome" style={linkStyle} className="logo">
                     Ricks Rolls
-                </a>
+                </Link>
             </div>
             <div className="navbar-center">
-                <ul className="nav-links" style={{
-                }}>
+                <ul className="nav-links">
                     <li>
-                        <a
-                            style={{
-                                color: theme === 'light' ? '#000' : '#00ffff',
-                            }}
-                            href="/rolls">Rolls</a>
+                        <Link to="/rolls" style={linkStyle}>
+                            Rolls
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            style={{
-                                color: theme === 'light' ? '#000' : '#00ffff',
-                            }}
-                            href="/pastries">Pastries</a>
+                        <Link to="/pastries" style={linkStyle}>
+                            Pastries
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            style={{
-                                color: theme === 'light' ? '#000' : '#00ffff',
-                            }}
-                            href="/aboutUs">About Us</a>
+                        <Link to="/aboutUs" style={linkStyle}>
+                            About Us
+                        </Link>
                     </li>
                 </ul>
             </div>
-            <button onClick={switchTheme(setTheme, theme)}
-                    style={{
-                        background: theme === 'light' ? '#87CEFAFF' : '#000',
-                        color: theme === 'light' ? '#000' : '#00ffff',                        borderWidth : "5px",
-                        borderColor: theme === 'light' ? '#000' : '#00ffff',
-                        borderStyle: "solid"
-                    }}>
-                {theme}
-            </button>
+
             <div className="navbar-right">
-                <a
-                    style={{
-                        color: theme === 'light' ? '#000' : '#00ffff',
-                    }}
-                    href="/cart" className="cart-icon">
-                    <i className="fas fa-shopping-cart"></i>
-                    <span className="cart-count">0</span>
-                </a>
-                <a
-                    style={{
-                        color: theme === 'light' ? '#000' : '#00ffff',
-                    }}
-                    href="/account" className="user-icon">
-                    <i className="fas fa-user"></i>
-                </a>
+                <Link to="/cart" style={linkStyle} className="cart-icon">
+                    <img
+                        src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/shopping-circle-blue-512.png"
+                        alt="Shopping Cart"
+                        width="30"
+                        height="30"
+                    />
+                </Link>
+
             </div>
+
         </div>
+            <div className={"theme-button-wrapper"}>
+            <button
+            onClick={switchTheme(setTheme, theme)}
+            style={{
+                background: theme === 'light' ? '#87CEFAFF' : '#000',
+                color: theme === 'light' ? '#000' : '#00ffff',
+                borderWidth: '5px',
+                borderColor: theme === 'light' ? '#000' : '#00ffff',
+                borderStyle: 'solid',
+            }}
+        >
+            {theme}
+        </button>
+            </div>
+        </>
     );
-};
+}
