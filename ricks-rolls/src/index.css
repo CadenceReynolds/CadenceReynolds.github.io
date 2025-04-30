@@ -46,11 +46,14 @@ body {
 
 :root {
   --bg-color: #87CEFAFF;
+  --bg-button-color: #68c9ff;
+  --shop-gap:10px;
   --text-color: black;
 }
 
 [data-theme='dark'] {
   --bg-color: #000000;
+  --bg-button-color: #0c0c0c;
   --text-color: #00ffff;
 }
 
@@ -58,4 +61,12 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background 0.3s ease, color 0.3s ease;
+}
+.shop button{
+  background-color: var(--bg-button-color);
+}
+.shop{
+  display:flex;
+  gap: var(--shop-gap);
+  flex-wrap: wrap;
 }

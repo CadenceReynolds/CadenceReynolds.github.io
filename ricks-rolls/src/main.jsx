@@ -16,7 +16,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<App />}>
-                        <Route path="ricksHome" element={<RicksHome />} />
+                        <Route index element={<RicksHome />} />
+                        <Route index path="ricksHome" element={<RicksHome />} />
                         <Route path="pastries" element={<Pastries />} />
                         <Route path="rolls" element={<Rolls />} />
                         <Route path="aboutUs" element={<AboutUs />} />
