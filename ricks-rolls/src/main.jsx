@@ -9,6 +9,7 @@ import './index.css';
 import Cart from "./Cart.jsx";
 import Rolls from "./Rolls.jsx";
 import RicksHome from "./RicksHome.jsx";
+import ThemeButton from "./ThemeSwitcher.jsx";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                         <Route path="cart" element={<Cart />} />
                     </Route>
                 </Routes>
+                <div className='ThemeButton'><ThemeButton></ThemeButton></div>
             </BrowserRouter>
         </ThemeProvider>
     </React.StrictMode>

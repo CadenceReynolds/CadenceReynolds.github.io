@@ -7,11 +7,6 @@
     border-radius: 25px;
 }
 
-.theme-button-wrapper {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px 20px;
-}
 
 .navbar-left .logo {
     font-size: 1.5rem;
