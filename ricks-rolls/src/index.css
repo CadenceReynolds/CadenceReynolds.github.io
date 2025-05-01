@@ -62,11 +62,20 @@ body {
   color: var(--text-color);
   transition: background 0.3s ease, color 0.3s ease;
 }
-.shop button{
-  background-color: var(--bg-button-color);
-}
 .shop{
   display:flex;
   gap: var(--shop-gap);
   flex-wrap: wrap;
+}
+.shop button{
+  background-color: var(--bg-button-color);
+}
+.shop button p{
+  color: var(--text-color);
+}
+
+.ThemeButton{
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
 }
