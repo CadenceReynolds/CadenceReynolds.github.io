@@ -17,12 +17,11 @@ const Cart = () => {
                          width="300px" height="300px"/>
                     <p>Dinner Rolls</p>
                 </ItemCounter>
-                <button>
+                <ItemCounter>
                     <img src="https://www.flourarrangements.org/wp-content/uploads/2021/03/French-Bread-Rolls-6.jpg"
                          alt="French Bread Rolls" width="300" height="300"/>
                     <p>French Bread Rolls</p>
-                    <span className="French-count">0</span>
-                </button>
+                </ItemCounter>
                 <button>
                     <img src="https://vikalinka.com/wp-content/uploads/2021/03/Garlic-Butter-Dinner-Rolls-11-Edit.jpg"
                          alt="Garlic Butter Dinner Rolls" width="300" height="300"/>
