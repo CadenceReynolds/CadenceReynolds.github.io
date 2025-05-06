@@ -1,11 +1,14 @@
 import { useState } from 'react';
 
 const ItemCounter = ({ children }) => {
-    const [count, setCounter] = useState(0);
+    const [count, setCounter] = useState(2);
 
 
     function decrement() {
-        setCounter(count - 1);
+        if(count > 0) {
+            setCounter(count - 1);
+        }
+
     }
 
     return (
