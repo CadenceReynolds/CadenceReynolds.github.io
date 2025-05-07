@@ -79,3 +79,7 @@ body {
   justify-content: flex-end;
   padding: 10px 20px;
 }
+
+.shop div{
+  color: var(--text-color);
+}
