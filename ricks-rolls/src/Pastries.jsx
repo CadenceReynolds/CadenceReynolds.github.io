@@ -18,7 +18,7 @@ const Pastries = () => {
                 />
                 <p>Cinnamon Rolls</p>
             </ItemCounter>
-            <button>
+            <ItemCounter>
                 <img
                     src="https://assets.epicurious.com/photos/65f8973526372cdbf112c90f/1:1/w_3353,h_3353,c_limit/Caramel-Rolls_HERO.jpg"
                     alt="Caramel Rolls"
@@ -26,7 +26,7 @@ const Pastries = () => {
                     height="300"
                 />
                 <p>Caramel Rolls</p>
-            </button>
+            </ItemCounter>
             </div>
         </>
     );
