@@ -1,20 +1,27 @@
-import { useState } from 'react';
+import {useState} from 'react';
 
-const ItemCounter = ({ children }) => {
+const ItemCounter = ({children}) => {
     const [count, setCounter] = useState(0);
 
 
     function increment() {
-            setCounter(count + 1);
+        setCounter(count + 1);
+    }
+
+    function decrement() {
+        if (count > 0) {
+            setCounter(count + -1);
+        }
+
     }
 
     return (
-        <div>
-            <button onClick={increment}>
-                {children}
-                <div>{count}</div>
-            </button>
-        </div>
+        <button className='item'>
+            <div>{children}</div>
+            <button onClick={increment}>+</button>
+            <button onClick={decrement}>-</button>
+            <div>{count}</div>
+        </button>
     );
 }
 

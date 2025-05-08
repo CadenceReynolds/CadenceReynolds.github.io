@@ -48,9 +48,7 @@ export default function Navbar() {
                             height="30"
                         />
                     </Link>
-
                 </div>
-
             </div>
         </>
     );

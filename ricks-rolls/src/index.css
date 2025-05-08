@@ -67,11 +67,14 @@ body {
   gap: var(--shop-gap);
   flex-wrap: wrap;
 }
-.shop button{
+.shop .item{
   background-color: var(--bg-button-color);
 }
-.shop button p{
+
+
+.shop button button{
   color: var(--text-color);
+  background-color: var(--bg-button-color);
 }
 
 .ThemeButton{
@@ -83,3 +86,4 @@ body {
 .shop div{
   color: var(--text-color);
 }
+
