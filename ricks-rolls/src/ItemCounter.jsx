@@ -18,8 +18,8 @@ const ItemCounter = ({children}) => {
     return (
         <button className='item'>
             <div>{children}</div>
-            <button onClick={increment}>+</button>
-            <button onClick={decrement}>-</button>
+            <button className='changers' onClick={increment}>+</button>
+            <button className='changers' onClick={decrement}>-</button>
             <div>{count}</div>
         </button>
     );
